@@ -1,0 +1,3 @@
+github "xmartlabs/Eureka" ~> 4.0
+github "EurekaCommunity/ImageRow" ~> 3.0
+github "SwiftKickMobile/SwiftMessages"

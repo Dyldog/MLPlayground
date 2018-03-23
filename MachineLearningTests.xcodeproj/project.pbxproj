@@ -7,21 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4933F91E203CCC950053A318 /* ModelInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933F91D203CCC950053A318 /* ModelInputViewController.swift */; };
+		4933F920203CCCB90053A318 /* ModelOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933F91F203CCCB90053A318 /* ModelOutputViewController.swift */; };
+		49549E99203D00380006A459 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49549E96203D00380006A459 /* Eureka.framework */; };
+		49549E9A203D00380006A459 /* ImageRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49549E97203D00380006A459 /* ImageRow.framework */; };
+		49549E9B203D00380006A459 /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49549E98203D00380006A459 /* SwiftMessages.framework */; };
+		49549E9D203D004D0006A459 /* Eureka.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49549E96203D00380006A459 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49549E9E203D004D0006A459 /* ImageRow.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49549E97203D00380006A459 /* ImageRow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49549E9F203D004D0006A459 /* SwiftMessages.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49549E98203D00380006A459 /* SwiftMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBA9081D20351372006C394E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9081C20351372006C394E /* AppDelegate.swift */; };
-		EBA9081F20351372006C394E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9081E20351372006C394E /* ViewController.swift */; };
 		EBA9082220351372006C394E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA9082020351372006C394E /* Main.storyboard */; };
 		EBA9082420351372006C394E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA9082320351372006C394E /* Assets.xcassets */; };
 		EBA9082720351372006C394E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA9082520351372006C394E /* LaunchScreen.storyboard */; };
+		EBA9083920351A26006C394E /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083120351A26006C394E /* Math.swift */; };
+		EBA9083A20351A26006C394E /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083220351A26006C394E /* UIImage+CVPixelBuffer.swift */; };
+		EBA9083B20351A26006C394E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083320351A26006C394E /* Array.swift */; };
+		EBA9083C20351A26006C394E /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083420351A26006C394E /* Predictions.swift */; };
+		EBA9083D20351A26006C394E /* MultiArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083520351A26006C394E /* MultiArray.swift */; };
+		EBA9083E20351A26006C394E /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083620351A26006C394E /* CVPixelBuffer+Helpers.swift */; };
+		EBA9083F20351A26006C394E /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083720351A26006C394E /* NonMaxSuppression.swift */; };
+		EBA9084020351A26006C394E /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9083820351A26006C394E /* MLMultiArray+Image.swift */; };
+		EBA9084320352D8A006C394E /* ModelDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9084220352D8A006C394E /* ModelDescription.swift */; };
+		EBA9084520352DDE006C394E /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9084420352DDE006C394E /* ModelManager.swift */; };
+		EBA9084720352F78006C394E /* ModelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9084620352F78006C394E /* ModelListViewController.swift */; };
+		EBA9084920353126006C394E /* ModelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9084820353126006C394E /* ModelDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		49549E9C203D003D0006A459 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49549E9D203D004D0006A459 /* Eureka.framework in CopyFiles */,
+				49549E9E203D004D0006A459 /* ImageRow.framework in CopyFiles */,
+				49549E9F203D004D0006A459 /* SwiftMessages.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4933F91D203CCC950053A318 /* ModelInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInputViewController.swift; sourceTree = "<group>"; };
+		4933F91F203CCCB90053A318 /* ModelOutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOutputViewController.swift; sourceTree = "<group>"; };
+		49549E96203D00380006A459 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+		49549E97203D00380006A459 /* ImageRow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageRow.framework; path = Carthage/Build/iOS/ImageRow.framework; sourceTree = "<group>"; };
+		49549E98203D00380006A459 /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
 		EBA9081920351372006C394E /* MachineLearningTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachineLearningTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA9081C20351372006C394E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBA9081E20351372006C394E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBA9082120351372006C394E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBA9082320351372006C394E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBA9082620351372006C394E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBA9082820351372006C394E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA9083120351A26006C394E /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		EBA9083220351A26006C394E /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		EBA9083320351A26006C394E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		EBA9083420351A26006C394E /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		EBA9083520351A26006C394E /* MultiArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArray.swift; sourceTree = "<group>"; };
+		EBA9083620351A26006C394E /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
+		EBA9083720351A26006C394E /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		EBA9083820351A26006C394E /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		EBA9084220352D8A006C394E /* ModelDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDescription.swift; sourceTree = "<group>"; };
+		EBA9084420352DDE006C394E /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		EBA9084620352F78006C394E /* ModelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListViewController.swift; sourceTree = "<group>"; };
+		EBA9084820353126006C394E /* ModelDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +79,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49549E99203D00380006A459 /* Eureka.framework in Frameworks */,
+				49549E9A203D00380006A459 /* ImageRow.framework in Frameworks */,
+				49549E9B203D00380006A459 /* SwiftMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		493035BA203D337100F997F3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBA9082020351372006C394E /* Main.storyboard */,
+				EBA9084620352F78006C394E /* ModelListViewController.swift */,
+				EBA9084820353126006C394E /* ModelDetailViewController.swift */,
+				4933F91D203CCC950053A318 /* ModelInputViewController.swift */,
+				4933F91F203CCCB90053A318 /* ModelOutputViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		493035BB203D339D00F997F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBA9084220352D8A006C394E /* ModelDescription.swift */,
+				EBA9084420352DDE006C394E /* ModelManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49549E93203CF46B0006A459 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBA9082320351372006C394E /* Assets.xcassets */,
+				EBA9082820351372006C394E /* Info.plist */,
+				49549E94203CF4760006A459 /* CoreMLHelpers */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49549E94203CF4760006A459 /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
+		49549E95203D00380006A459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49549E96203D00380006A459 /* Eureka.framework */,
+				49549E97203D00380006A459 /* ImageRow.framework */,
+				49549E98203D00380006A459 /* SwiftMessages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBA9081020351372006C394E = {
 			isa = PBXGroup;
 			children = (
-				EBA9081B20351372006C394E /* MachineLearningTests */,
+				EBA9081B20351372006C394E /* Sources */,
+				49549E93203CF46B0006A459 /* Supporting Files */,
 				EBA9081A20351372006C394E /* Products */,
+				49549E95203D00380006A459 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,18 +154,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EBA9081B20351372006C394E /* MachineLearningTests */ = {
+		EBA9081B20351372006C394E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				EBA9081C20351372006C394E /* AppDelegate.swift */,
-				EBA9081E20351372006C394E /* ViewController.swift */,
-				EBA9082020351372006C394E /* Main.storyboard */,
-				EBA9082320351372006C394E /* Assets.xcassets */,
+				493035BA203D337100F997F3 /* View Controllers */,
+				493035BB203D339D00F997F3 /* Model */,
 				EBA9082520351372006C394E /* LaunchScreen.storyboard */,
-				EBA9082820351372006C394E /* Info.plist */,
+				EBA9083020351A26006C394E /* CoreMLHelpers */,
 			);
-			path = MachineLearningTests;
+			path = Sources;
 			sourceTree = "<group>";
+		};
+		EBA9083020351A26006C394E /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				EBA9083120351A26006C394E /* Math.swift */,
+				EBA9083220351A26006C394E /* UIImage+CVPixelBuffer.swift */,
+				EBA9083320351A26006C394E /* Array.swift */,
+				EBA9083420351A26006C394E /* Predictions.swift */,
+				EBA9083520351A26006C394E /* MultiArray.swift */,
+				EBA9083620351A26006C394E /* CVPixelBuffer+Helpers.swift */,
+				EBA9083720351A26006C394E /* NonMaxSuppression.swift */,
+				EBA9083820351A26006C394E /* MLMultiArray+Image.swift */,
+			);
+			name = CoreMLHelpers;
+			path = CoreMLHelpers/CoreMLHelpers;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -71,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBA9082B20351372006C394E /* Build configuration list for PBXNativeTarget "MachineLearningTests" */;
 			buildPhases = (
+				49549E9C203D003D0006A459 /* CopyFiles */,
 				EBA9081520351372006C394E /* Sources */,
 				EBA9081620351372006C394E /* Frameworks */,
 				EBA9081720351372006C394E /* Resources */,
@@ -136,8 +255,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA9081F20351372006C394E /* ViewController.swift in Sources */,
+				EBA9083C20351A26006C394E /* Predictions.swift in Sources */,
+				4933F920203CCCB90053A318 /* ModelOutputViewController.swift in Sources */,
+				4933F91E203CCC950053A318 /* ModelInputViewController.swift in Sources */,
+				EBA9083A20351A26006C394E /* UIImage+CVPixelBuffer.swift in Sources */,
+				EBA9083B20351A26006C394E /* Array.swift in Sources */,
+				EBA9083D20351A26006C394E /* MultiArray.swift in Sources */,
+				EBA9083E20351A26006C394E /* CVPixelBuffer+Helpers.swift in Sources */,
 				EBA9081D20351372006C394E /* AppDelegate.swift in Sources */,
+				EBA9084520352DDE006C394E /* ModelManager.swift in Sources */,
+				EBA9084020351A26006C394E /* MLMultiArray+Image.swift in Sources */,
+				EBA9084920353126006C394E /* ModelDetailViewController.swift in Sources */,
+				EBA9083F20351A26006C394E /* NonMaxSuppression.swift in Sources */,
+				EBA9084720352F78006C394E /* ModelListViewController.swift in Sources */,
+				EBA9084320352D8A006C394E /* ModelDescription.swift in Sources */,
+				EBA9083920351A26006C394E /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +406,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5B99RCV62;
-				INFOPLIST_FILE = MachineLearningTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.MachineLearningTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,12 +428,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5B99RCV62;
-				INFOPLIST_FILE = MachineLearningTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.MachineLearningTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
