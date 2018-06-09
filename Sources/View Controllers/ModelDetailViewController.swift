@@ -27,6 +27,8 @@ extension MLFeatureType: CustomStringConvertible {
       return "multiArray"
     case .dictionary:
       return "dictionary"
+    case .sequence:
+        return "sequence"
     }
   }
 }

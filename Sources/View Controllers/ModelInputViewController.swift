@@ -61,7 +61,7 @@ class ModelInputViewController: FormViewController {
                     $0.title = inputName
                     $0.tag = inputName
                 }
-            case .dictionary, .multiArray, .invalid:
+            case .dictionary, .multiArray, .sequence, .invalid:
                 let dictionaryValue = input.dictionaryConstraint
                 section <<< LabelRow() {
                     $0.title = inputName
