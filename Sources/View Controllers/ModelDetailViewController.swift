@@ -34,11 +34,16 @@ extension MLFeatureType: CustomStringConvertible {
 }
 
 class ModelDetailViewController: FormViewController {
-  var model: ModelDescription?
+    var modelId: String?
+    var model: ModelDescription? {
+        guard let modelId = modelId else { return nil }
+        return ModelManager.shared.model(withID: modelId)
+    }
+    
   @IBOutlet weak var textView: UITextView!
 
-  init(model: ModelDescription) {
-    self.model = model
+  init(modelId: String) {
+    self.modelId = modelId
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -92,6 +97,44 @@ class ModelDetailViewController: FormViewController {
         }
     
     if modelCompiled {
+        addCellsForCompiledModel()
+    }
+    
+    
+
+    let displayStep = {
+        DispatchQueue.main.async {
+            self.updateView()
+        }
+    }
+    
+    let compileStep = {
+      //self.setText(text: "Compiling model...")
+      ModelManager.shared.compileModel(withID: model.id) {
+        self.addCellsForCompiledModel()
+        displayStep()
+      }
+    }
+    let downloadStep = {
+      DispatchQueue.global().async {
+        //self.setText(text: "Downloading model...")
+        ModelManager.shared.downloadModel(withID: model.id) {
+            self.updateView()
+            compileStep()
+        }
+      }
+    }
+
+    if modelSaved == false {
+      downloadStep()
+    } else if modelCompiled == false {
+      compileStep()
+    } else {
+      displayStep()
+    }
+  }
+    
+    func addCellsForCompiledModel() {
         guard let mlModel = try! self.model?.mlModel(in: FileStorage.documentDirectoryURL)
             else { return }
         
@@ -132,38 +175,24 @@ class ModelDetailViewController: FormViewController {
             <<< ButtonRow() {
                 $0.title = "Test Model"
                 $0.onCellSelection({ _,_ in self.testButtonTapped() })
-            }
-    }
-    
-    
-
-    let displayStep = self.updateView
-    let compileStep = {
-      //self.setText(text: "Compiling model...")
-      ModelManager.shared.compileModel(withID: model.id) {
-        displayStep()
-      }
-    }
-    let downloadStep = {
-      DispatchQueue.global().async {
-        //self.setText(text: "Downloading model...")
-        ModelManager.shared.downloadModel(withID: model.id) {
-          compileStep()
         }
-      }
     }
-
-    if modelSaved == false {
-      downloadStep()
-    } else if modelCompiled == false {
-      compileStep()
-    } else {
-      displayStep()
-    }
-  }
 
   func updateView() {
+    guard let model = model else { return }
+    let modelSaved = model.savedPath != nil
+    let modelCompiled = model.compiledPath != nil
     
+    let savedRow = form.allSections[0][0] as! LabelRow
+    let compiledRow = form.allSections[0][1] as! LabelRow
+    
+    
+    DispatchQueue.main.async {
+        savedRow.value = (modelSaved ? "true" : "false")
+        savedRow.reload()
+        compiledRow.value = (modelCompiled ? "true" : "false")
+        compiledRow.reload()
+    }
   }
 
   @IBAction func testButtonTapped() {
