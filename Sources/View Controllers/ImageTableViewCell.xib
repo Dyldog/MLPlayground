@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageTabelViewCell" customModule="MachineLearningTests" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="1000" id="li3-FU-0Pr" customClass="ImageTableViewCell" customModule="MachineLearningTests" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="782" height="1000"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="li3-FU-0Pr" id="7pW-nS-nbJ">
+                <rect key="frame" x="0.0" y="0.0" width="782" height="999.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="1022" placeholderIntrinsicHeight="infinite" insetsLayoutMarginsFromSafeArea="NO" image="Scorpion" translatesAutoresizingMaskIntoConstraints="NO" id="wqr-SK-Mdb">
+                        <rect key="frame" x="20" y="247" width="742" height="742"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="wqr-SK-Mdb" secondAttribute="height" id="BfB-ar-XUw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBM-TT-wN3">
+                        <rect key="frame" x="20" y="31" width="742" height="206"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="qBM-TT-wN3" secondAttribute="trailing" id="38T-Ax-B2a"/>
+                    <constraint firstItem="wqr-SK-Mdb" firstAttribute="trailing" secondItem="7pW-nS-nbJ" secondAttribute="trailingMargin" id="430-XI-kR1"/>
+                    <constraint firstItem="wqr-SK-Mdb" firstAttribute="bottom" secondItem="7pW-nS-nbJ" secondAttribute="bottomMargin" id="cD5-PJ-Oah"/>
+                    <constraint firstItem="wqr-SK-Mdb" firstAttribute="leading" secondItem="7pW-nS-nbJ" secondAttribute="leadingMargin" id="hrN-fG-lqJ"/>
+                    <constraint firstItem="qBM-TT-wN3" firstAttribute="top" secondItem="7pW-nS-nbJ" secondAttribute="topMargin" id="jNd-T0-47W"/>
+                    <constraint firstItem="wqr-SK-Mdb" firstAttribute="top" secondItem="qBM-TT-wN3" secondAttribute="bottom" constant="10" id="slM-9D-G5H"/>
+                    <constraint firstItem="qBM-TT-wN3" firstAttribute="leading" secondItem="7pW-nS-nbJ" secondAttribute="leadingMargin" id="z3o-SY-x47"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="aspectRatioConstraint" destination="BfB-ar-XUw" id="kGZ-dS-C2l"/>
+                <outlet property="bigImageView" destination="wqr-SK-Mdb" id="s5l-SW-0tg"/>
+                <outlet property="label" destination="qBM-TT-wN3" id="7kB-4y-J8i"/>
+            </connections>
+            <point key="canvasLocation" x="570" y="-736"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Scorpion" width="1100" height="732"/>
+    </resources>
+</document>

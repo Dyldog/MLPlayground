@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4909762B20CB88E100B46B22 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4909762A20CB88E100B46B22 /* ImageTableViewCell.swift */; };
+		4909762D20CB88EB00B46B22 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4909762C20CB88EB00B46B22 /* ImageTableViewCell.xib */; };
 		4933F91E203CCC950053A318 /* ModelInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933F91D203CCC950053A318 /* ModelInputViewController.swift */; };
 		4933F920203CCCB90053A318 /* ModelOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933F91F203CCCB90053A318 /* ModelOutputViewController.swift */; };
 		49549E99203D00380006A459 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49549E96203D00380006A459 /* Eureka.framework */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4909762A20CB88E100B46B22 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		4909762C20CB88EB00B46B22 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		4933F91D203CCC950053A318 /* ModelInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInputViewController.swift; sourceTree = "<group>"; };
 		4933F91F203CCCB90053A318 /* ModelOutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOutputViewController.swift; sourceTree = "<group>"; };
 		49549E96203D00380006A459 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				EBA9084820353126006C394E /* ModelDetailViewController.swift */,
 				4933F91D203CCC950053A318 /* ModelInputViewController.swift */,
 				4933F91F203CCCB90053A318 /* ModelOutputViewController.swift */,
+				4909762A20CB88E100B46B22 /* ImageTableViewCell.swift */,
+				4909762C20CB88EB00B46B22 /* ImageTableViewCell.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA9082720351372006C394E /* LaunchScreen.storyboard in Resources */,
+				4909762D20CB88EB00B46B22 /* ImageTableViewCell.xib in Resources */,
 				EBA9082420351372006C394E /* Assets.xcassets in Resources */,
 				EBA9082220351372006C394E /* Main.storyboard in Resources */,
 			);
@@ -264,6 +271,7 @@
 				EBA9083E20351A26006C394E /* CVPixelBuffer+Helpers.swift in Sources */,
 				EBA9081D20351372006C394E /* AppDelegate.swift in Sources */,
 				EBA9084520352DDE006C394E /* ModelManager.swift in Sources */,
+				4909762B20CB88E100B46B22 /* ImageTableViewCell.swift in Sources */,
 				EBA9084020351A26006C394E /* MLMultiArray+Image.swift in Sources */,
 				EBA9084920353126006C394E /* ModelDetailViewController.swift in Sources */,
 				EBA9083F20351A26006C394E /* NonMaxSuppression.swift in Sources */,
