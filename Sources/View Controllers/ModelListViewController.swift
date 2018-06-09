@@ -32,26 +32,38 @@ class ModelListViewController: UIViewController, UITableViewDataSource, UITableV
     // let storyboard = UIStoryboard(name: "Main", bundle: nil)
     //let viewController = storyboard.instantiateViewController(withIdentifier: "ModelDetailScreen") as! ModelDetailViewController
     // viewController.model = model
-    let viewController = ModelDetailViewController(model: model)
+    let viewController = ModelDetailViewController(modelId: model.id)
     self.navigationController?.pushViewController(viewController, animated: true)
   }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let model = ModelManager.shared.model(at: indexPath.row)
+            ModelManager.shared.removeModel(withID: model.id)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 
-  func showNewModelAlert() {
+  func showNewModelAlert(name: String? = nil, url: String? = nil) {
     let alert = UIAlertController(title: "Add Model", message: nil, preferredStyle: .alert)
 
     alert.addTextField { (textfield) in
       textfield.placeholder = "Model name"
+        textfield.text = name
     }
 
     alert.addTextField { (textfield) in
       textfield.placeholder = "Model url"
+        textfield.text = url
     }
 
     let confirmAction = UIAlertAction(title: "Add", style: .default) { (action) in
-      guard let name = alert.textFields?[0].text, let urlString = alert.textFields?[1].text
-        else { return }
-
-      ModelManager.shared.newModel(withName: name, networkURL: URL(string: urlString)!)
+        guard let name = alert.textFields?[0].text else { self.alert(title: "Error", message: "Name cannot be empty"); return }
+        
+        guard let urlString = alert.textFields?[1].text else { self.alert(title: "Error", message: "URL cannot be empty"); return }
+        guard let url = URL(string: urlString) else { self.alert(title: "Error", message: "URL is invalid"); return }
+        
+      ModelManager.shared.newModel(withName: name, networkURL: url)
       self.tableView.reloadData()
     }
     alert.addAction(confirmAction)
