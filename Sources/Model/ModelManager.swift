@@ -31,7 +31,11 @@ class FileStorage {
     
     static func moveFile(at url: URL, to path: String) {
         let newURL = documentDirectoryURL.appendingPathComponent(path)
-        try! FileManager.default.moveItem(at: url, to: newURL)
+        try? FileManager.default.moveItem(at: url, to: newURL)
+    }
+    
+    static func deleteFile(at url: URL) {
+        try? FileManager.default.removeItem(at: url)
     }
 }
 
@@ -49,11 +53,11 @@ class ModelManager {
     init() {
         loadModels()
         
-        if models.count == 0 {
-            let model = ModelDescription(name: "SqueezeNet", networkURL: URL(string: "https://docs-assets.developer.apple.com/coreml/models/SqueezeNet.mlmodel")!)
-            models = [ model.id: model ]
-            saveModels()
-        }
+//        if models.count == 0 {
+//            let model = ModelDescription(name: "SqueezeNet", networkURL: URL(string: "https://docs-assets.developer.apple.com/coreml/models/SqueezeNet.mlmodel")!)
+//            models = [ model.id: model ]
+//            saveModels()
+//        }
     }
     
     // TODO: Move somewhere else
@@ -152,9 +156,27 @@ class ModelManager {
         return Array(ModelManager.shared.models.values)[index]
     }
     
+    func model(withID id: String) -> ModelDescription? {
+        return self.models[id]
+    }
+    
     func newModel(withName name: String, networkURL: URL) {
         let model = ModelDescription(name: name, networkURL: networkURL)
         models[model.id] = model
+        saveModels()
+    }
+    
+    func removeModel(withID id: String) {
+        guard let model = self.model(withID: id) else { return }
+        if let savedURL = model.savedURL(in: FileStorage.documentDirectoryURL) {
+            FileStorage.deleteFile(at: savedURL)
+        }
+        
+        if let compiledURL = model.compiledURL(in: FileStorage.documentDirectoryURL) {
+            FileStorage.deleteFile(at: compiledURL)
+        }
+        
+        self.models.removeValue(forKey: id)
         saveModels()
     }
 }
